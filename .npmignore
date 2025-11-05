@@ -1,11 +1,33 @@
-# Don't publish these to NPM
-.next/
+# Dependencies
 node_modules/
+
+# Lock files (users should generate their own)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+
+# Git and IDE
 .git/
+.gitignore
 .vscode/
+.idea/
+
+# Logs
 *.log
 
-# DO publish these (override .gitignore)
-!README.md
-!LICENSE
-!package.json
+# Environment files
+.env*
+
+# Testing
+coverage/
+
+# OS files
+.DS_Store
+*.swp
+*.swo
