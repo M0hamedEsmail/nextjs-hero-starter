@@ -1,68 +1,50 @@
 # Next Hero Starter 🚀
 
 [![npm version](https://img.shields.io/npm/v/next-hero-starter.svg)](https://www.npmjs.com/package/next-hero-starter)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-> **Save hours of setup time!** Production-ready Next.js starter with HeroUI, Redux Toolkit, React Hook Form, Yup validation, and authentication boilerplate.
+> **Save hours of setup!** Production-ready Next.js with HeroUI, Redux Toolkit, React Hook Form, Yup, and auth boilerplate.
 
-## 🎯 Why This Package?
+## Why?
 
-Stop wasting hours configuring the same setup for every new Next.js project. This template provides everything you need to start building features immediately:
+Skip repetitive setup. Start building features immediately with:
 
-- ✅ Beautiful UI components (HeroUI)
-- ✅ State management (Redux Toolkit)
-- ✅ Form handling & validation (React Hook Form + Yup)
-- ✅ TypeScript configuration
-- ✅ Authentication boilerplate
-- ✅ Best practices & clean architecture
+✅ HeroUI components • Redux Toolkit • React Hook Form + Yup • TypeScript • Auth boilerplate • Best practices
 
-## ✨ What's Included
+## Stack
 
-| Technology | Why? |
-|------------|------|
-| **Next.js 16** | Latest React framework with SSR & optimization |
-| **HeroUI** | Beautiful, accessible UI components out of the box |
-| **Redux Toolkit** | 90% less boilerplate than classic Redux |
-| **React Hook Form** | Best performance with minimal re-renders |
-| **Yup** | Schema-based validation, clean and maintainable |
-| **TypeScript** | Full type safety, no `any` types |
-| **Tailwind CSS v4** | Rapid UI development |
+| Tech | Why |
+|------|-----|
+| **Next.js 16** | SSR & optimization |
+| **HeroUI** | Beautiful, accessible components |
+| **Redux Toolkit** | 90% less boilerplate |
+| **React Hook Form** | Minimal re-renders |
+| **Yup** | Schema validation |
+| **TypeScript** | Type safety |
+| **Tailwind v4** | Rapid styling |
 
-### 🔐 Authentication Ready
-- Login form with validation
-- Redux auth state management
-- Conditional rendering examples
-- TypeScript interfaces included
-
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
-# Install
 npm install next-hero-starter
-
-# Run
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your app!
-
-## 📁 Project Structure
+## Structure
 
 ```
 src/
-├── app/          # Pages, layout, store, providers
-├── components/   # LoginForm, navbar, footer
-├── store/        # Redux slices
-├── types/        # TypeScript interfaces
-└── hooks/        # Custom typed Redux hooks
+├── app/         # Pages, store, providers
+├── components/  # LoginForm, navbar, footer
+├── store/       # Redux slices
+├── types/       # TypeScript interfaces
+└── hooks/       # Typed Redux hooks
 ```
 
-## 🛠️ Usage Examples
+## Examples
 
-### Add Redux Slice
-
+**Redux Slice**
 ```tsx
-// src/store/userSlice.ts
 import { createSlice } from '@reduxjs/toolkit';
 
 const userSlice = createSlice({
@@ -74,140 +56,68 @@ const userSlice = createSlice({
     },
   },
 });
-
-export const { setProfile } = userSlice.actions;
-export default userSlice.reducer;
 ```
 
-### Create Form with Validation
-
+**Form + Validation**
 ```tsx
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Input, Button } from "@heroui/react";
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
 });
 
 export default function MyForm() {
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit } = useForm({
     resolver: yupResolver(schema),
   });
-
-  return (
-    <form onSubmit={handleSubmit(data => console.log(data))}>
-      <Input {...register("email")} errorMessage={errors.email?.message} />
-      <Button type="submit">Submit</Button>
-    </form>
-  );
+  return <form onSubmit={handleSubmit(data => console.log(data))} />;
 }
 ```
 
-### Use Redux in Components
-
+**Use Redux**
 ```tsx
 import { useAppSelector, useAppDispatch } from "@/hooks/useRedux";
-import { login, logout } from "@/store/authSlice";
+import { login } from "@/store/authSlice";
 
-export default function MyComponent() {
-  const { isAuthenticated, user } = useAppSelector((state) => state.auth);
-  const dispatch = useAppDispatch();
-
-  return (
-    <div>
-      {isAuthenticated ? (
-        <p>Welcome, {user.email}</p>
-      ) : (
-        <button onClick={() => dispatch(login({ email: "user@example.com" }))}>
-          Login
-        </button>
-      )}
-    </div>
-  );
-}
+const { isAuthenticated, user } = useAppSelector(state => state.auth);
+const dispatch = useAppDispatch();
 ```
 
-## 🎨 Customization
+## Customize
 
-### Change to LTR (from RTL)
-Edit `src/app/layout.tsx`:
-```tsx
-<html lang="en" dir="ltr">
-```
+**LTR:** Edit `src/app/layout.tsx` → `<html lang="en" dir="ltr">`  
+**Theme:** Edit `tailwind.config.ts`  
+**Branding:** Edit `navbar.tsx` & `footer.tsx`
 
-### Customize Theme
-Edit `tailwind.config.ts`:
-```js
-export default {
-  theme: {
-    extend: {
-      colors: { primary: '#your-color' }
-    }
-  }
-};
-```
-
-### Update Navbar/Footer
-Edit `src/components/navbar.tsx` and `footer.tsx` with your branding.
-
-## 🔐 Backend Integration
-
-Replace the example auth with real API:
+## API Integration
 
 ```tsx
 const onSubmit = async (data) => {
-  const response = await fetch('/api/login', {
+  const res = await fetch('/api/login', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   });
-  const user = await response.json();
-  dispatch(login(user));
+  dispatch(login(await res.json()));
 };
 ```
 
-## 📖 Best Practices Included
-
-- ✅ Full TypeScript type safety
-- ✅ Custom typed Redux hooks
-- ✅ Clean folder structure
-- ✅ Separation of concerns
-- ✅ Schema-based validation
-- ✅ Performance optimized
-
-## 🚀 Deploy
+## Deploy
 
 ```bash
-# Vercel (Recommended)
-npm install -g vercel
-vercel
-
-# Or build for production
-npm run build
-npm start
+vercel        # Recommended
+npm run build # Production
 ```
 
-## 📝 License
-
-MIT © [m0hamedesmail](https://github.com/m0hamedesmail)
-
-## 🔗 Links
+## Links
 
 - **NPM:** [next-hero-starter](https://www.npmjs.com/package/next-hero-starter)
 - **GitHub:** [M0hamedEsmail/next-hero-starter](https://github.com/M0hamedEsmail/next-hero-starter)
 - **Author:** [m0hamedesmail](https://github.com/m0hamedesmail) - CEO & Founder of [MERNCore.com](https://merncore.com)
 
-## 💡 Documentation
-
-- [Next.js Docs](https://nextjs.org/docs)
-- [HeroUI Docs](https://heroui.com)
-- [Redux Toolkit Docs](https://redux-toolkit.js.org)
-- [React Hook Form Docs](https://react-hook-form.com)
+**Docs:** [Next.js](https://nextjs.org/docs) • [HeroUI](https://heroui.com) • [Redux Toolkit](https://redux-toolkit.js.org) • [React Hook Form](https://react-hook-form.com)
 
 ---
 
-**Made with ❤️ by [m0hamedesmail](https://github.com/m0hamedesmail)**
-
-**⭐ Star on [GitHub](https://github.com/M0hamedEsmail/next-hero-starter) if this saved you time!**
+**Made with ❤️ by [m0hamedesmail](https://github.com/m0hamedesmail) • ⭐ [Star on GitHub](https://github.com/M0hamedEsmail/next-hero-starter)**
