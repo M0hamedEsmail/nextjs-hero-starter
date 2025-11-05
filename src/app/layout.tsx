@@ -6,8 +6,8 @@ import { Providers } from "./providers";
 
 
 export const metadata: Metadata = {
-  title:"NextJs starter template  ",
-  description: "",
+  title: "Next Hero Starter - Next.js + HeroUI + Redux Toolkit",
+  description: "A modern Next.js starter template with HeroUI components, Redux Toolkit state management, React Hook Form, Yup validation, and authentication boilerplate. Built with TypeScript and best practices by m0hamedesmail.",
 };
 
 export default function RootLayout({
