@@ -19,9 +19,9 @@ export default function RootLayout({
     <html lang="ar" dir="rtl">
       <body className="font-sans antialiased">
         <Providers>
-          <div className="min-h-screen overflow-x-hidden">
+          <div className=" h-screen  overflow-x-hidden">
             <Navbar />
-            <main>
+            <main >
               {children}
             </main>
             <Footer />

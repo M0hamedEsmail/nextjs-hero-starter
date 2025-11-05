@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 px-4 dark:bg-zinc-900">
+    <div className="flex h-full items-center justify-center bg-zinc-50 px-4 dark:bg-zinc-900">
       <Card className="w-full max-w-md p-4">
         <CardHeader className="flex flex-col gap-1 pb-4">
           <h1 className="text-2xl font-semibold">
