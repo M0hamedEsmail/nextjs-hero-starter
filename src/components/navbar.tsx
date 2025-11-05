@@ -9,96 +9,89 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
-  Button,
 } from "@heroui/react";
 
-export const AcmeLogo = () => {
+// Logo component with developer initials
+const Logo = () => {
   return (
-    <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
-      <path
-        clipRule="evenodd"
-        d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-        fill="currentColor"
-        fillRule="evenodd"
-      />
-    </svg>
+    <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">
+      ME
+    </div>
   );
 };
 
-export default function App() {
+export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  // Navigation menu items with links
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    { name: "Home", href: "/" },
+    { name: "GitHub", href: "https://github.com/m0hamedesmail" },
+    { name: "NPM Profile", href: "https://www.npmjs.com/~m0hamedesmail" },
+    { name: "This Package", href: "https://www.npmjs.com/package/next-hero-starter" },
   ];
 
   return (
-    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar 
+      isBordered 
+      isMenuOpen={isMenuOpen} 
+      onMenuOpenChange={setIsMenuOpen} 
+      maxWidth="full"
+    >
+      {/* Mobile menu toggle */}
       <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+        <NavbarMenuToggle 
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"} 
+        />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      {/* Mobile brand */}
+      <NavbarContent className="pr-3 sm:hidden" justify="center">
         <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
+          <Logo />
+          <p className="ml-2 font-bold text-inherit">m0hamedesmail</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      {/* Desktop navigation */}
+      <NavbarContent className="hidden gap-4 sm:flex" justify="start">
         <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
+          <Logo />
+          <p className="ml-2 font-bold text-inherit">m0hamedesmail</p>
         </NavbarBrand>
+      </NavbarContent>
+
+      {/* Desktop menu items */}
+      <NavbarContent className="hidden gap-6 sm:flex" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
+          <Link color="foreground" href="https://github.com/m0hamedesmail" target="_blank">
+            GitHub
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link aria-current="page" href="#">
-            Customers
+        <NavbarItem>
+          <Link color="foreground" href="https://www.npmjs.com/~m0hamedesmail" target="_blank">
+            NPM Profile
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link color="foreground" href="https://www.npmjs.com/package/next-hero-starter" target="_blank">
+            This Package
           </Link>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="warning" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-
+      {/* Mobile menu */}
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={`${item.name}-${index}`}>
             <Link
               className="w-full"
-              color={
-                index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              href="#"
+              color="foreground"
+              href={item.href}
               size="lg"
+              target={item.href.startsWith("http") ? "_blank" : undefined}
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
