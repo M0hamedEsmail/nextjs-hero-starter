@@ -21,7 +21,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex min-h-screen flex-col overflow-x-hidden">
             <Navbar />
-            <main className="flex-1">
+            <main className="flex flex-1 flex-col">
               {children}
             </main>
             <Footer />
