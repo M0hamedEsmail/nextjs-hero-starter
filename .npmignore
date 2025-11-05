@@ -1,0 +1,11 @@
+# Don't publish these to NPM
+.next/
+node_modules/
+.git/
+.vscode/
+*.log
+
+# DO publish these (override .gitignore)
+!README.md
+!LICENSE
+!package.json
