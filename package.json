@@ -1,7 +1,31 @@
 {
   "name": "next-hero-starter",
   "version": "0.1.0",
-  "private": true,
+  "description": "A modern Next.js starter template with HeroUI components, Redux Toolkit state management, React Hook Form, Yup validation, and authentication boilerplate. Built with TypeScript and best practices.",
+  "keywords": [
+    "nextjs",
+    "next",
+    "heroui",
+    "redux",
+    "redux-toolkit",
+    "react-hook-form",
+    "yup",
+    "typescript",
+    "starter",
+    "template",
+    "boilerplate",
+    "authentication"
+  ],
+  "author": "m0hamedesmail",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/M0hamedEsmail/next-hero-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/M0hamedEsmail/next-hero-starter/issues"
+  },
+  "homepage": "https://github.com/M0hamedEsmail/next-hero-starter#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
