@@ -1,21 +1,27 @@
-# 🚀 Next Hero Starter
-
-[![npm version](https://img.shields.io/npm/v/next-hero-starter.svg)](https://www.npmjs.com/package/next-hero-starter)
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![Node.js Version](https://img.shields.io/node/v/next-hero-starter)](https://nodejs.org/)
-
-**Production-ready Next.js starter with HeroUI, Redux Toolkit, React Hook Form, Yup validation, and authentication boilerplate.**
-
-[Quick Start](#-quick-start) • [Features](#-features) • [What's Included](#-whats-included) • [Usage](#-usage) • [Documentation](#-documentation)
+<div align="center">
+  <h1>🚀 next-hero-starter</h1>
+  <p><strong>Scaffold production-ready Next.js + HeroUI + Redux frontends in seconds</strong></p>
+  
+  [![npm version](https://img.shields.io/npm/v/next-hero-starter.svg?style=flat-square)](https://www.npmjs.com/package/next-hero-starter)
+  [![npm downloads](https://img.shields.io/npm/dm/next-hero-starter.svg?style=flat-square)](https://www.npmjs.com/package/next-hero-starter)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+  [![Node.js Version](https://img.shields.io/node/v/next-hero-starter.svg?style=flat-square)](https://nodejs.org)
+  
+  <p>
+    <a href="#-quick-start">Quick Start</a> •
+    <a href="#-features">Features</a> •
+    <a href="#-whats-included">What's Included</a> •
+    <a href="#-customization">Customization</a>
+  </p>
+</div>
 
 ---
 
-## 🎯 Why Next Hero Starter?
+## 🎯 Why next-hero-starter?
 
-Stop wasting **hours** setting up the same configuration for every Next.js project. Get a complete, production-ready frontend with authentication, state management, form validation, and best practices baked in.
+Stop wasting **hours** setting up the same frontend infrastructure. **next-hero-starter** generates a complete, production-ready Next.js application with HeroUI components, Redux Toolkit state management, authentication, and best practices baked in.
 
 **Perfect for:**
-
 - 🏃‍♂️ **Hackathons & MVPs** - Start building features in minutes
 - 📚 **Learning Full-Stack Development** - Study modern React patterns
 - 🎓 **Teaching Frontend Architecture** - Production-grade examples
@@ -26,17 +32,38 @@ Stop wasting **hours** setting up the same configuration for every Next.js proje
 
 ## ✨ Features
 
-| 🎨 Modern UI | ⚡ State Management | 🛠️ Developer Experience |
-|---|---|---|
-| **HeroUI Components**<br>Beautiful, accessible UI out of the box | **Redux Toolkit**<br>90% less boilerplate than classic Redux | **TypeScript**<br>Full type safety, zero `any` types |
-| **Tailwind CSS v4**<br>Rapid styling with utility-first CSS | **Typed Redux Hooks**<br>Custom hooks with full inference | **Clean Architecture**<br>MVC-inspired folder structure |
-| **Dark Mode Ready**<br>Built-in theme switching | **Auth Boilerplate**<br>Complete login/logout flow | **Best Practices**<br>Industry-standard patterns |
+<table>
+<tr>
+<td width="33%" valign="top">
 
-| 📋 Forms & Validation | 🔐 Security | 🚀 Performance |
-|---|---|---|
-| **React Hook Form**<br>Minimal re-renders, optimal performance | **Non-Commercial License**<br>Free for personal/learning use | **Next.js 16**<br>Latest React with SSR & optimization |
-| **Yup Validation**<br>Schema-based, maintainable validation | **Type-Safe Auth**<br>Proper interfaces & error handling | **Code Splitting**<br>Automatic optimization |
-| **Error Handling**<br>User-friendly error messages | **No Password Storage**<br>Secure authentication patterns | **React 19**<br>Latest features & improvements |
+### 🎨 Modern UI
+- **HeroUI Components** - Beautiful, accessible UI library
+- **Tailwind CSS v4** - Utility-first styling
+- **Dark Mode** - Built-in theme switching
+- **Responsive Design** - Mobile-first approach
+
+</td>
+<td width="33%" valign="top">
+
+### ⚡ State Management
+- **Redux Toolkit** - 90% less boilerplate
+- **Typed Hooks** - Full TypeScript inference
+- **Auth Boilerplate** - Login/logout flow included
+- **DevTools** - Redux DevTools integration
+
+</td>
+<td width="33%" valign="top">
+
+### 🛠️ Developer Experience
+- **TypeScript** - Full type safety
+- **React Hook Form** - Performant forms
+- **Yup Validation** - Schema-based validation
+- **ESLint + Prettier** - Code quality tools
+- **Clean Architecture** - MVC-inspired structure
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -45,20 +72,20 @@ Stop wasting **hours** setting up the same configuration for every Next.js proje
 Get your Next.js app running in **60 seconds**:
 
 ```bash
-# Clone or download the package
-npx create-next-app my-app --example https://github.com/M0hamedEsmail/next-hero-starter
+# Create your project with npx (no installation needed)
+npx create-next-hero-starter my-awesome-app
 
 # Navigate to your project
-cd my-app
+cd my-awesome-app
 
-# Install dependencies
+# Install dependencies (if not auto-installed)
 npm install
 
 # Start developing
 npm run dev
 ```
 
-That's it! Your app is now running at `http://localhost:3000` 🎉
+**That's it!** Your app is now running at `http://localhost:3000` 🎉
 
 ---
 
@@ -69,27 +96,44 @@ That's it! Your app is now running at `http://localhost:3000` 🎉
 No installation required - just run:
 
 ```bash
-npx create-next-app my-project --example https://github.com/M0hamedEsmail/next-hero-starter
+npx create-next-hero-starter my-project-name
 ```
 
-### Option 2: Install from NPM
+### Option 2: Install Globally
 
 ```bash
-npm install next-hero-starter
+npm install -g next-hero-starter
+create-next-hero-starter my-project-name
 ```
 
-Then copy the files to your project directory.
+### Available CLI Options
 
-### What Happens Next
+```bash
+create-next-hero-starter <project-name> [options]
 
-You get a complete Next.js application with:
+Options:
+  --no-install    Skip npm install
+  --git           Initialize git repository
+  --verbose       Show detailed logs
+  -v, --version   Output version number
+  -h, --help      Display help
+```
 
-1. ✅ All dependencies installed
-2. ✅ TypeScript configured
-3. ✅ Redux store ready
-4. ✅ Authentication boilerplate
-5. ✅ UI components styled
-6. ✅ Best practices implemented
+### Example Usage
+
+```bash
+# Basic usage
+npx create-next-hero-starter my-app
+
+# Skip dependency installation
+npx create-next-hero-starter my-app --no-install
+
+# With git initialization
+npx create-next-hero-starter my-app --git
+
+# Verbose output
+npx create-next-hero-starter my-app --verbose
+```
 
 ---
 
@@ -99,34 +143,34 @@ You get a complete Next.js application with:
 
 ```
 your-project/
-├── 📂 src/
-│   ├── 📂 app/              # Next.js App Router
-│   │   ├── page.tsx         # Main page with auth example
-│   │   ├── layout.tsx       # Root layout + providers
-│   │   ├── store.ts         # Redux store configuration
-│   │   ├── providers.tsx    # Redux & HeroUI providers
-│   │   └── globals.css      # Global styles
+├── src/
+│   ├── app/              # Next.js App Router
+│   │   ├── page.tsx      # Main page with auth example
+│   │   ├── layout.tsx    # Root layout + providers
+│   │   ├── store.ts      # Redux store configuration
+│   │   ├── providers.tsx # Redux & HeroUI providers
+│   │   └── globals.css   # Global styles
 │   │
-│   ├── 📂 components/       # Reusable components
-│   │   ├── LoginForm.tsx    # Form with validation
-│   │   ├── navbar.tsx       # Navigation bar
-│   │   └── footer.tsx       # Footer component
+│   ├── components/       # Reusable components
+│   │   ├── LoginForm.tsx # Form with validation
+│   │   ├── navbar.tsx    # Navigation bar
+│   │   └── footer.tsx    # Footer component
 │   │
-│   ├── 📂 store/            # Redux slices
-│   │   └── authSlice.ts     # Authentication state
+│   ├── store/            # Redux slices
+│   │   └── authSlice.ts  # Authentication state
 │   │
-│   ├── 📂 types/            # TypeScript definitions
-│   │   └── auth.ts          # Auth interfaces
+│   ├── types/            # TypeScript definitions
+│   │   └── auth.ts       # Auth interfaces
 │   │
-│   └── 📂 hooks/            # Custom hooks
-│       └── useRedux.ts      # Typed Redux hooks
+│   └── hooks/            # Custom hooks
+│       └── useRedux.ts   # Typed Redux hooks
 │
-├── 📂 public/               # Static assets
-├── 📄 package.json          # Dependencies
-├── 📄 tsconfig.json         # TypeScript config
-├── 📄 tailwind.config.ts    # Tailwind config
-├── 📄 next.config.ts        # Next.js config
-└── 📄 README.md             # Documentation
+├── public/               # Static assets
+├── package.json          # Dependencies
+├── tsconfig.json         # TypeScript config
+├── tailwind.config.ts    # Tailwind config
+├── next.config.ts        # Next.js config
+└── README.md             # Project documentation
 ```
 
 ### 🔋 Tech Stack & Dependencies
@@ -137,7 +181,7 @@ your-project/
 - **TypeScript** `^5` - Full type safety
 
 **UI & Styling:**
-- **HeroUI** `^2.8.5` - Beautiful, accessible components
+- **HeroUI** `^2.8.5` - Beautiful, accessible component library
 - **Tailwind CSS** `^4` - Utility-first CSS framework
 
 **State Management:**
@@ -147,61 +191,75 @@ your-project/
 **Forms & Validation:**
 - **React Hook Form** `^7.66.0` - Performant form management
 - **Yup** `^1.7.1` - Schema validation
-- **@hookform/resolvers** `^5.2.2` - React Hook Form + Yup integration
+- **@hookform/resolvers** `^5.2.2` - Integration layer
 
 ---
 
-## ⚙️ Configuration Guide
+## 🎯 Use Cases
 
-### Change Language Direction
+Perfect for building:
 
-The template is set to RTL (Arabic). To change to LTR, edit `src/app/layout.tsx`:
+- 🛍️ **E-commerce Frontends** - Product catalogs, shopping carts, checkout flows
+- 📱 **SaaS Applications** - Dashboards, user management, analytics
+- 💬 **Social Platforms** - User profiles, feeds, messaging interfaces
+- 📰 **Blog/CMS Frontends** - Content display, admin panels
+- 🎓 **Learning Platforms** - Course interfaces, student portals
+- 🏢 **Business Applications** - CRM interfaces, admin dashboards
+- 🎮 **Gaming Frontends** - Player dashboards, leaderboards
 
-```tsx
-<html lang="en" dir="ltr">  {/* Changed from "ar" and "rtl" */}
-```
+---
 
-### Customize Theme
+## 🛡️ Best Practices Included
 
-Edit `tailwind.config.ts`:
+| Feature | Implementation |
+|---------|---------------|
+| 🔐 **Type Safety** | Full TypeScript, strict mode enabled |
+| 🎯 **Custom Hooks** | Typed Redux hooks with inference |
+| 📁 **Code Organization** | Clean folder structure, MVC-inspired |
+| 🔄 **Separation of Concerns** | Components, state, types separated |
+| ✅ **Validation** | Schema-based with Yup |
+| ⚡ **Performance** | Minimal re-renders with React Hook Form |
+| 🎨 **Styling** | Utility-first with Tailwind CSS |
+| 🌙 **Dark Mode** | Built-in theme support |
 
-```js
+---
+
+## 🔧 Customization
+
+### Update Theme Colors
+
+Edit `tailwind.config.ts` in your generated project:
+
+```ts
 export default {
   theme: {
     extend: {
       colors: {
-        primary: '#your-color',
+        primary: '#your-brand-color',
       },
     },
   },
 };
 ```
 
-### Update Branding
+### Add New Redux Slice
 
-Edit `src/components/navbar.tsx` and `footer.tsx` with your:
-- Brand name
-- Logo
-- Links
-- Social media
+Create a new file in `src/store/`:
 
----
-
-## 🛠️ Usage
-
-### Add Redux Slice
-
-Create new slices in `src/store/`:
-
-```tsx
+```ts
 // src/store/userSlice.ts
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+interface User {
+  id: string;
+  name: string;
+}
 
 const userSlice = createSlice({
   name: 'user',
-  initialState: { profile: null },
+  initialState: { profile: null as User | null },
   reducers: {
-    setProfile(state, action) {
+    setProfile(state, action: PayloadAction<User>) {
       state.profile = action.payload;
     },
   },
@@ -211,7 +269,7 @@ export const { setProfile } = userSlice.actions;
 export default userSlice.reducer;
 ```
 
-### Create Form with Validation
+### Create Forms with Validation
 
 ```tsx
 import { useForm } from "react-hook-form";
@@ -221,6 +279,7 @@ import { Input, Button } from "@heroui/react";
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
+  password: yup.string().min(8).required(),
 });
 
 export default function MyForm() {
@@ -231,87 +290,22 @@ export default function MyForm() {
   return (
     <form onSubmit={handleSubmit(data => console.log(data))}>
       <Input {...register("email")} errorMessage={errors.email?.message} />
+      <Input {...register("password")} type="password" errorMessage={errors.password?.message} />
       <Button type="submit">Submit</Button>
     </form>
   );
 }
 ```
 
-### Use Redux in Components
-
-```tsx
-import { useAppSelector, useAppDispatch } from "@/hooks/useRedux";
-import { login, logout } from "@/store/authSlice";
-
-export default function MyComponent() {
-  const { isAuthenticated, user } = useAppSelector(state => state.auth);
-  const dispatch = useAppDispatch();
-
-  return (
-    <div>
-      {isAuthenticated ? (
-        <p>Welcome, {user.email}</p>
-      ) : (
-        <button onClick={() => dispatch(login({ email: "user@example.com" }))}>
-          Login
-        </button>
-      )}
-    </div>
-  );
-}
-```
-
----
-
-## 🔐 Backend Integration
-
-Replace the example auth with real API:
-
-```tsx
-const onSubmit = async (data) => {
-  const res = await fetch('/api/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  });
-  const user = await res.json();
-  dispatch(login(user));
-};
-```
-
----
-
-## 🎯 Use Cases
-
-Perfect for building:
-
-- 🛍️ **E-commerce Frontends** - Product catalogs, shopping carts, checkout
-- 📱 **SaaS Applications** - Dashboards, user management, analytics
-- 💬 **Social Platforms** - User profiles, feeds, messaging
-- 📰 **Blog/CMS Frontends** - Content display, admin panels
-- 🎓 **Learning Platforms** - Course interfaces, student portals
-- 🏢 **Business Applications** - CRM interfaces, admin dashboards
-
----
-
-## 🛡️ Best Practices Included
-
-| Feature | Implementation |
-|---------|---------------|
-| 🔐 **Type Safety** | Full TypeScript, no `any` types |
-| 🎯 **Custom Hooks** | Typed Redux hooks with inference |
-| 📁 **Code Organization** | Clean folder structure |
-| 🔄 **Separation of Concerns** | Components, state, types separated |
-| ✅ **Validation** | Schema-based, maintainable |
-| ⚡ **Performance** | Minimal re-renders with React Hook Form |
-
 ---
 
 ## 📖 Available Scripts
 
+After generating your project:
+
 ```bash
 npm run dev      # Start development server with hot reload
-npm run build    # Build for production
+npm run build    # Build optimized production bundle
 npm run start    # Start production server
 npm run lint     # Run ESLint
 ```
@@ -322,6 +316,8 @@ npm run lint     # Run ESLint
 
 ### Vercel (Recommended)
 
+The easiest way to deploy Next.js:
+
 ```bash
 npm install -g vercel
 vercel
@@ -329,12 +325,11 @@ vercel
 
 Or connect your GitHub repo to [Vercel](https://vercel.com) for automatic deployments.
 
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
+### Other Platforms
+- **Netlify:** Connect your Git repository
+- **AWS Amplify:** Use the Amplify Console
+- **Railway:** Deploy with one command
+- **Digital Ocean App Platform:** Deploy from GitHub
 
 ---
 
@@ -345,30 +340,84 @@ npm start
 | ✅ Next.js Setup | ✓ | ✓ | ✓ |
 | ✅ TypeScript | ✓ | ✓ | ✓ |
 | ✅ Tailwind CSS | ✓ | ✓ | ✓ |
-| ✅ UI Components | ✓ | ❌ | ❌ |
+| ✅ UI Component Library | ✓ HeroUI | ❌ | ❌ |
 | ✅ Redux Toolkit | ✓ | ❌ | ❌ |
 | ✅ Form Validation | ✓ | ❌ | ❌ |
 | ✅ Auth Boilerplate | ✓ | ❌ | ❌ |
-| ✅ Best Practices | ✓ | ⚠️ Basic | ❌ |
+| ✅ Typed Hooks | ✓ | ❌ | ❌ |
+| ✅ Dark Mode | ✓ | ❌ | ❌ |
 | ⏱️ Setup Time | **60 seconds** | 5 minutes | **Hours** |
 
 ---
 
-## 📄 License
+## 🆚 Why Choose next-hero-starter?
 
-**CC BY-NC 4.0** © [m0hamedesmail](https://github.com/m0hamedesmail)
+<table>
+<tr>
+<th width="25%">Manual Setup</th>
+<th width="25%">Create Next App</th>
+<th width="25%">Other Boilerplates</th>
+<th width="25%">next-hero-starter ⭐</th>
+</tr>
+<tr>
+<td>
 
-**Free for:**
-- ✅ Personal projects
-- ✅ Learning & education
-- ✅ Open source projects
-- ✅ Portfolio work
+❌ Hours of setup
 
-**Not allowed:**
-- ❌ Selling the template
-- ❌ Commercial use without permission
+❌ No components
 
-For commercial use, please contact: [m0hamedesmail](https://github.com/m0hamedesmail)
+❌ No state management
+
+❌ No forms
+
+❌ No validation
+
+</td>
+<td>
+
+⚠️ Basic setup
+
+✅ Next.js configured
+
+❌ No UI library
+
+❌ No state
+
+❌ No auth
+
+</td>
+<td>
+
+⚠️ Overengineered
+
+⚠️ Too opinionated
+
+❌ Steep learning curve
+
+⚠️ Hard to modify
+
+</td>
+<td>
+
+✅ 60-second setup
+
+✅ Production-ready
+
+✅ UI library included
+
+✅ State management
+
+✅ Forms + validation
+
+✅ Auth boilerplate
+
+✅ Easy to customize
+
+✅ Well documented
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -383,34 +432,65 @@ We welcome contributions!
 
 ---
 
+## 📄 License
+
+**MIT** © [m0hamedesmail](https://github.com/m0hamedesmail)
+
+Free to use for personal and commercial projects.
+
+---
+
 ## 💬 Support & Community
 
-- 📚 **Documentation**: [GitHub Wiki](https://github.com/M0hamedEsmail/next-hero-starter)
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/M0hamedEsmail/next-hero-starter/issues)
-- ⭐ **Star us** on GitHub to stay updated
+Need help? We've got you covered:
+
+- 📚 **Documentation:** This README + generated project README
+- 🐛 **Bug Reports:** [GitHub Issues](https://github.com/M0hamedEsmail/next-hero-starter/issues)
+- 💡 **Feature Requests:** [GitHub Discussions](https://github.com/M0hamedEsmail/next-hero-starter/discussions)
+- ⭐ **Star us on GitHub** to stay updated
+
+---
+
+## 🗺️ Roadmap
+
+Coming soon:
+
+- [ ] API integration examples
+- [ ] Protected routes example
+- [ ] More form components
+- [ ] Additional Redux slices
+- [ ] Testing setup (Jest + React Testing Library)
+- [ ] Storybook integration
+- [ ] i18n support
+- [ ] PWA configuration
 
 ---
 
 ## 🔗 Links
 
-- **NPM Package**: [next-hero-starter](https://www.npmjs.com/package/next-hero-starter)
-- **GitHub Repository**: [M0hamedEsmail/next-hero-starter](https://github.com/M0hamedEsmail/next-hero-starter)
-- **Author**: [m0hamedesmail](https://github.com/m0hamedesmail)
-- **Company**: [MERNCore.com](https://merncore.com)
+- **NPM Package:** [next-hero-starter](https://www.npmjs.com/package/next-hero-starter)
+- **GitHub Repository:** [M0hamedEsmail/next-hero-starter](https://github.com/M0hamedEsmail/next-hero-starter)
+- **Author:** [m0hamedesmail](https://github.com/m0hamedesmail)
+- **Company:** [MERNCore.com](https://merncore.com)
 
 ---
 
-## 💡 Documentation
+## 💡 Documentation Resources
 
-- [Next.js Docs](https://nextjs.org/docs)
-- [HeroUI Docs](https://heroui.com)
-- [Redux Toolkit Docs](https://redux-toolkit.js.org)
-- [React Hook Form Docs](https://react-hook-form.com)
+- [Next.js Docs](https://nextjs.org/docs) - Next.js framework documentation
+- [HeroUI Docs](https://heroui.com) - HeroUI component library
+- [Redux Toolkit Docs](https://redux-toolkit.js.org) - State management
+- [React Hook Form Docs](https://react-hook-form.com) - Form handling
+- [Tailwind CSS Docs](https://tailwindcss.com) - Styling utilities
 
 ---
 
-### ⭐ If Next Hero Starter helped you, please star the repo! ⭐
+<div align="center">
+
+### ⭐ If next-hero-starter helped you, please star the repo! ⭐
 
 **Made with ❤️ by [m0hamedesmail](https://github.com/m0hamedesmail) - CEO & Founder of [MERNCore.com](https://merncore.com)**
 
 [Report Bug](https://github.com/M0hamedEsmail/next-hero-starter/issues) · [Request Feature](https://github.com/M0hamedEsmail/next-hero-starter/issues) · [Contribute](https://github.com/M0hamedEsmail/next-hero-starter/pulls)
+
+</div>

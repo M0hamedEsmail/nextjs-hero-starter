@@ -1,0 +1,85 @@
+#!/usr/bin/env node
+
+import { Command } from 'commander';
+import chalk from 'chalk';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import { readFileSync } from 'fs';
+import createProject from './createProject.js';
+import type { CliOptions } from './types/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const packageJson = JSON.parse(readFileSync(join(__dirname, '../package.json'), 'utf-8')) as {
+  version: string;
+  name: string;
+};
+
+const program = new Command();
+
+program
+  .name('create-next-hero-starter')
+  .description('🚀 Generate a production-ready Next.js + HeroUI + Redux Toolkit frontend')
+  .version(packageJson.version, '-v, --version', 'Output the current version')
+  .argument('<project-name>', 'Name of your project')
+  .option('--no-install', 'Skip npm install')
+  .option('--git', 'Initialize git repository')
+  .option('--template <type>', 'Template type (currently only "full" is available)', 'full')
+  .option('--verbose', 'Show detailed logs')
+  .action(async (projectName: string, options: CliOptions) => {
+    try {
+      console.log();
+      console.log(chalk.cyan.bold('╔═══════════════════════════════════════════╗'));
+      console.log(chalk.cyan.bold('║                                           ║'));
+      console.log(chalk.cyan.bold('      🚀 Next Hero Starter Generator 🚀     '));
+      console.log(chalk.cyan.bold('║                                           ║'));
+      console.log(chalk.cyan.bold('╚═══════════════════════════════════════════╝'));
+      console.log();
+
+      await createProject(projectName, options);
+
+      console.log();
+      console.log(chalk.green.bold('✨ ════════════════════════════════════════ ✨'));
+      console.log(chalk.green.bold('   🎉 PROJECT CREATED SUCCESSFULLY! 🎉'));
+      console.log(chalk.green.bold('✨ ════════════════════════════════════════ ✨'));
+      console.log();
+      console.log(chalk.cyan('📁 Your project is ready at:'), chalk.white.bold(`./${projectName}`));
+      console.log();
+      console.log(chalk.yellow('📝 Next steps:'));
+      console.log();
+      console.log(chalk.white(`   cd ${projectName}`));
+
+      if (!options.install) {
+        console.log(chalk.white('   npm install'));
+      }
+
+      console.log(chalk.white('   cp .env.example .env'));
+      console.log(chalk.white('   # Edit .env with your configuration'));
+      console.log(chalk.white('   npm run dev'));
+      console.log();
+      console.log(chalk.cyan('📚 Documentation:'), chalk.white('README.md'));
+      console.log();
+      console.log(chalk.magenta('Happy coding! 💻✨'));
+      console.log();
+    } catch (error) {
+      console.error();
+      console.error(
+        chalk.red.bold('❌ ERROR:'),
+        chalk.red(error instanceof Error ? error.message : String(error))
+      );
+      console.error();
+
+      if (options.verbose && error instanceof Error && error.stack) {
+        console.error(chalk.gray(error.stack));
+      }
+
+      process.exit(1);
+    }
+  });
+
+program.parse(process.argv);
+
+if (!process.argv.slice(2).length) {
+  program.outputHelp();
+}

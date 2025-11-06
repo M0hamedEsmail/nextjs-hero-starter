@@ -1,0 +1,57 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "version": "0.1.0",
+  "description": "A modern Next.js starter template with HeroUI components, Redux Toolkit state management, React Hook Form, Yup validation, and authentication boilerplate. Built with TypeScript and best practices.",
+  "keywords": [
+    "nextjs",
+    "next",
+    "heroui",
+    "redux",
+    "redux-toolkit",
+    "react-hook-form",
+    "yup",
+    "typescript",
+    "starter",
+    "template",
+    "boilerplate",
+    "authentication"
+  ],
+  "author": "m0hamedesmail",
+  "license": "CC-BY-NC-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/M0hamedEsmail/next-hero-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/M0hamedEsmail/next-hero-starter/issues"
+  },
+  "homepage": "https://github.com/M0hamedEsmail/next-hero-starter#readme",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@heroui/react": "^2.8.5",
+    "@hookform/resolvers": "^5.2.2",
+    "@reduxjs/toolkit": "^2.10.1",
+    "next": "16.0.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-hook-form": "^7.66.0",
+    "react-redux": "^9.2.0",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Lock files (users should generate their own)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+
+# Git and IDE
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment files
+.env*
+
+# Testing
+coverage/
+
+# OS files
+.DS_Store
+*.swp
+*.swo
+
+# Template files
+template.gitignore
+bin/

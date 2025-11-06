@@ -1,33 +1,49 @@
-# Dependencies
-node_modules/
+# Source files
+src/
+tsconfig.json
 
-# Lock files (users should generate their own)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# Development files
+.prettierrc.json
+.prettierignore
+eslint.config.js
 
-# Build outputs
-.next/
-out/
-dist/
-build/
-
-# Git and IDE
+# Git
 .git/
 .gitignore
+
+# Node
+node_modules/
+package-lock.json
+
+# Build artifacts
+*.tsbuildinfo
+
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Logs
 *.log
+logs/
 
-# Environment files
-.env*
+# Tests
+test/
+tests/
+*.test.*
+*.spec.*
 
-# Testing
-coverage/
+# CI
+.github/
+.gitlab-ci.yml
+.travis.yml
 
-# OS files
-.DS_Store
-*.swp
-*.swo
+# Documentation (keep only README and LICENSE)
+CONTRIBUTING.md
+CHANGELOG.md
