@@ -1,10 +1,10 @@
 {
-  "name": "next-hero-starter",
+  "name": "nextjs-hero-starter",
   "version": "1.0.0",
   "description": "CLI tool to scaffold production-ready Next.js + HeroUI + Redux Toolkit frontend with authentication and best practices",
   "type": "module",
   "bin": {
-    "create-next-hero-starter": "./dist/cli.js"
+    "create-nextjs-hero-starter": "./dist/cli.js"
   },
   "main": "./dist/createProject.js",
   "types": "./dist/createProject.d.ts",
@@ -66,10 +66,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/M0hamedEsmail/next-hero-starter.git"
+    "url": "https://github.com/M0hamedEsmail/nextjs-hero-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/M0hamedEsmail/next-hero-starter/issues"
+    "url": "https://github.com/M0hamedEsmail/nextjs-hero-starter/issues"
   },
-  "homepage": "https://github.com/M0hamedEsmail/next-hero-starter#readme"
+  "homepage": "https://github.com/M0hamedEsmail/nextjs-hero-starter#readme"
 }

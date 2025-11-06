@@ -62,7 +62,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://www.npmjs.com/package/next-hero-starter"
+                  href="https://www.npmjs.com/package/nextjs-hero-starter"
                   target="_blank"
                   className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
                 >

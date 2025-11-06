@@ -1,11 +1,11 @@
 <div align="center">
-  <h1>🚀 next-hero-starter</h1>
+  <h1>🚀 nextjs-hero-starter</h1>
   <p><strong>Scaffold production-ready Next.js + HeroUI + Redux frontends in seconds</strong></p>
   
-  [![npm version](https://img.shields.io/npm/v/next-hero-starter.svg?style=flat-square)](https://www.npmjs.com/package/next-hero-starter)
-  [![npm downloads](https://img.shields.io/npm/dm/next-hero-starter.svg?style=flat-square)](https://www.npmjs.com/package/next-hero-starter)
+  [![npm version](https://img.shields.io/npm/v/nextjs-hero-starter.svg?style=flat-square)](https://www.npmjs.com/package/nextjs-hero-starter)
+  [![npm downloads](https://img.shields.io/npm/dm/nextjs-hero-starter.svg?style=flat-square)](https://www.npmjs.com/package/nextjs-hero-starter)
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-  [![Node.js Version](https://img.shields.io/node/v/next-hero-starter.svg?style=flat-square)](https://nodejs.org)
+  [![Node.js Version](https://img.shields.io/node/v/nextjs-hero-starter.svg?style=flat-square)](https://nodejs.org)
   
   <p>
     <a href="#-quick-start">Quick Start</a> •
@@ -17,9 +17,9 @@
 
 ---
 
-## 🎯 Why next-hero-starter?
+## 🎯 Why nextjs-hero-starter?
 
-Stop wasting **hours** setting up the same frontend infrastructure. **next-hero-starter** generates a complete, production-ready Next.js application with HeroUI components, Redux Toolkit state management, authentication, and best practices baked in.
+Stop wasting **hours** setting up the same frontend infrastructure. **nextjs-hero-starter** generates a complete, production-ready Next.js application with HeroUI components, Redux Toolkit state management, authentication, and best practices baked in.
 
 **Perfect for:**
 - 🏃‍♂️ **Hackathons & MVPs** - Start building features in minutes
@@ -73,7 +73,7 @@ Get your Next.js app running in **60 seconds**:
 
 ```bash
 # Create your project with npx (no installation needed)
-npx create-next-hero-starter my-awesome-app
+npx create-nextjs-hero-starter my-awesome-app
 
 # Navigate to your project
 cd my-awesome-app
@@ -96,20 +96,20 @@ npm run dev
 No installation required - just run:
 
 ```bash
-npx create-next-hero-starter my-project-name
+npx create-nextjs-hero-starter my-project-name
 ```
 
 ### Option 2: Install Globally
 
 ```bash
-npm install -g next-hero-starter
-create-next-hero-starter my-project-name
+npm install -g nextjs-hero-starter
+create-nextjs-hero-starter my-project-name
 ```
 
 ### Available CLI Options
 
 ```bash
-create-next-hero-starter <project-name> [options]
+create-nextjs-hero-starter <project-name> [options]
 
 Options:
   --no-install    Skip npm install
@@ -123,16 +123,16 @@ Options:
 
 ```bash
 # Basic usage
-npx create-next-hero-starter my-app
+npx create-nextjs-hero-starter my-app
 
 # Skip dependency installation
-npx create-next-hero-starter my-app --no-install
+npx create-nextjs-hero-starter my-app --no-install
 
 # With git initialization
-npx create-next-hero-starter my-app --git
+npx create-nextjs-hero-starter my-app --git
 
 # Verbose output
-npx create-next-hero-starter my-app --verbose
+npx create-nextjs-hero-starter my-app --verbose
 ```
 
 ---
@@ -350,14 +350,14 @@ Or connect your GitHub repo to [Vercel](https://vercel.com) for automatic deploy
 
 ---
 
-## 🆚 Why Choose next-hero-starter?
+## 🆚 Why Choose nextjs-hero-starter?
 
 <table>
 <tr>
 <th width="25%">Manual Setup</th>
 <th width="25%">Create Next App</th>
 <th width="25%">Other Boilerplates</th>
-<th width="25%">next-hero-starter ⭐</th>
+<th width="25%">nextjs-hero-starter ⭐</th>
 </tr>
 <tr>
 <td>
@@ -425,7 +425,7 @@ Or connect your GitHub repo to [Vercel](https://vercel.com) for automatic deploy
 
 We welcome contributions!
 
-1. 🐛 **Report bugs** - [Open an issue](https://github.com/M0hamedEsmail/next-hero-starter/issues)
+1. 🐛 **Report bugs** - [Open an issue](https://github.com/M0hamedEsmail/nextjs-hero-starter/issues)
 2. 💡 **Suggest features** - Share your ideas
 3. 🔧 **Submit PRs** - Fork, code, and create pull requests
 4. ⭐ **Star the repo** - Show your support
@@ -445,8 +445,8 @@ Free to use for personal and commercial projects.
 Need help? We've got you covered:
 
 - 📚 **Documentation:** This README + generated project README
-- 🐛 **Bug Reports:** [GitHub Issues](https://github.com/M0hamedEsmail/next-hero-starter/issues)
-- 💡 **Feature Requests:** [GitHub Discussions](https://github.com/M0hamedEsmail/next-hero-starter/discussions)
+- 🐛 **Bug Reports:** [GitHub Issues](https://github.com/M0hamedEsmail/nextjs-hero-starter/issues)
+- 💡 **Feature Requests:** [GitHub Discussions](https://github.com/M0hamedEsmail/nextjs-hero-starter/discussions)
 - ⭐ **Star us on GitHub** to stay updated
 
 ---
@@ -468,8 +468,8 @@ Coming soon:
 
 ## 🔗 Links
 
-- **NPM Package:** [next-hero-starter](https://www.npmjs.com/package/next-hero-starter)
-- **GitHub Repository:** [M0hamedEsmail/next-hero-starter](https://github.com/M0hamedEsmail/next-hero-starter)
+- **NPM Package:** [nextjs-hero-starter](https://www.npmjs.com/package/nextjs-hero-starter)
+- **GitHub Repository:** [M0hamedEsmail/nextjs-hero-starter](https://github.com/M0hamedEsmail/nextjs-hero-starter)
 - **Author:** [m0hamedesmail](https://github.com/m0hamedesmail)
 - **Company:** [MERNCore.com](https://merncore.com)
 
@@ -487,10 +487,10 @@ Coming soon:
 
 <div align="center">
 
-### ⭐ If next-hero-starter helped you, please star the repo! ⭐
+### ⭐ If nextjs-hero-starter helped you, please star the repo! ⭐
 
 **Made with ❤️ by [m0hamedesmail](https://github.com/m0hamedesmail) - CEO & Founder of [MERNCore.com](https://merncore.com)**
 
-[Report Bug](https://github.com/M0hamedEsmail/next-hero-starter/issues) · [Request Feature](https://github.com/M0hamedEsmail/next-hero-starter/issues) · [Contribute](https://github.com/M0hamedEsmail/next-hero-starter/pulls)
+[Report Bug](https://github.com/M0hamedEsmail/nextjs-hero-starter/issues) · [Request Feature](https://github.com/M0hamedEsmail/nextjs-hero-starter/issues) · [Contribute](https://github.com/M0hamedEsmail/nextjs-hero-starter/pulls)
 
 </div>

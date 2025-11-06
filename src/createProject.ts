@@ -192,7 +192,7 @@ const initializeGit = async (projectPath: string, options: CliOptions): Promise<
       verbose,
     });
 
-    await runCommand('git', ['commit', '-m', 'Initial commit from next-hero-starter'], {
+    await runCommand('git', ['commit', '-m', 'Initial commit from nextjs-hero-starter'], {
       cwd: projectPath,
       verbose,
     });

@@ -2,11 +2,11 @@
 
 
 
-A modern Next.js application built with **Next Hero Starter** - featuring HeroUI components, Redux Toolkit state management, React Hook Form validation, and authentication boilerplate.[![npm version](https://img.shields.io/npm/v/next-hero-starter.svg)](https://www.npmjs.com/package/next-hero-starter)
+A modern Next.js application built with **Next Hero Starter** - featuring HeroUI components, Redux Toolkit state management, React Hook Form validation, and authentication boilerplate.[![npm version](https://img.shields.io/npm/v/nextjs-hero-starter.svg)](https://www.npmjs.com/package/nextjs-hero-starter)
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-## 🚀 Getting Started[![Node.js Version](https://img.shields.io/node/v/next-hero-starter)](https://nodejs.org/)
+## 🚀 Getting Started[![Node.js Version](https://img.shields.io/node/v/nextjs-hero-starter)](https://nodejs.org/)
 
 
 
@@ -94,7 +94,7 @@ npm start
 
 {{PROJECT_NAME}}/# Clone or download the package
 
-├── src/npx create-next-app my-app --example https://github.com/M0hamedEsmail/next-hero-starter
+├── src/npx create-next-app my-app --example https://github.com/M0hamedEsmail/nextjs-hero-starter
 
 │   ├── app/              # Next.js App Router
 
@@ -140,7 +140,7 @@ npm start
 
 └── package.json```bash
 
-```npx create-next-app my-project --example https://github.com/M0hamedEsmail/next-hero-starter
+```npx create-next-app my-project --example https://github.com/M0hamedEsmail/nextjs-hero-starter
 
 ```
 
@@ -152,7 +152,7 @@ npm start
 
 - **Next.js 16** - React framework with App Router```bash
 
-- **React 19** - Latest React featuresnpm install next-hero-starter
+- **React 19** - Latest React featuresnpm install nextjs-hero-starter
 
 - **TypeScript** - Type-safe development```
 
@@ -526,7 +526,7 @@ Or connect your GitHub repo to [Vercel](https://vercel.com) for automatic deploy
 
 ---
 
-This project was generated using **next-hero-starter**.
+This project was generated using **nextjs-hero-starter**.
 
 ## 🔐 Backend Integration
 
@@ -544,7 +544,7 @@ const onSubmit = async (data) => {
 
     method: 'POST',
 
-Report issues at: [next-hero-starter GitHub](https://github.com/M0hamedEsmail/next-hero-starter/issues)    headers: { 'Content-Type': 'application/json' },
+Report issues at: [nextjs-hero-starter GitHub](https://github.com/M0hamedEsmail/nextjs-hero-starter/issues)    headers: { 'Content-Type': 'application/json' },
 
     body: JSON.stringify(data),
 
@@ -552,7 +552,7 @@ Report issues at: [next-hero-starter GitHub](https://github.com/M0hamedEsmail/ne
 
   const user = await res.json();
 
-- Check the [documentation](https://github.com/M0hamedEsmail/next-hero-starter#readme)  dispatch(login(user));
+- Check the [documentation](https://github.com/M0hamedEsmail/nextjs-hero-starter#readme)  dispatch(login(user));
 
 - Open a discussion on GitHub};
 
@@ -562,7 +562,7 @@ Report issues at: [next-hero-starter GitHub](https://github.com/M0hamedEsmail/ne
 
 ---
 
-**Built with [Next Hero Starter](https://www.npmjs.com/package/next-hero-starter) by [m0hamedesmail](https://github.com/m0hamedesmail)**
+**Built with [Next Hero Starter](https://www.npmjs.com/package/nextjs-hero-starter) by [m0hamedesmail](https://github.com/m0hamedesmail)**
 
 ## 🎯 Use Cases
 
@@ -659,7 +659,7 @@ For commercial use, please contact: [m0hamedesmail](https://github.com/m0hamedes
 
 We welcome contributions!
 
-1. 🐛 **Report bugs** - [Open an issue](https://github.com/M0hamedEsmail/next-hero-starter/issues)
+1. 🐛 **Report bugs** - [Open an issue](https://github.com/M0hamedEsmail/nextjs-hero-starter/issues)
 2. 💡 **Suggest features** - Share your ideas
 3. 🔧 **Submit PRs** - Fork, code, and create pull requests
 4. ⭐ **Star the repo** - Show your support
@@ -668,16 +668,16 @@ We welcome contributions!
 
 ## 💬 Support & Community
 
-- 📚 **Documentation**: [GitHub Wiki](https://github.com/M0hamedEsmail/next-hero-starter)
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/M0hamedEsmail/next-hero-starter/issues)
+- 📚 **Documentation**: [GitHub Wiki](https://github.com/M0hamedEsmail/nextjs-hero-starter)
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/M0hamedEsmail/nextjs-hero-starter/issues)
 - ⭐ **Star us** on GitHub to stay updated
 
 ---
 
 ## 🔗 Links
 
-- **NPM Package**: [next-hero-starter](https://www.npmjs.com/package/next-hero-starter)
-- **GitHub Repository**: [M0hamedEsmail/next-hero-starter](https://github.com/M0hamedEsmail/next-hero-starter)
+- **NPM Package**: [nextjs-hero-starter](https://www.npmjs.com/package/nextjs-hero-starter)
+- **GitHub Repository**: [M0hamedEsmail/nextjs-hero-starter](https://github.com/M0hamedEsmail/nextjs-hero-starter)
 - **Author**: [m0hamedesmail](https://github.com/m0hamedesmail)
 - **Company**: [MERNCore.com](https://merncore.com)
 
@@ -696,4 +696,4 @@ We welcome contributions!
 
 **Made with ❤️ by [m0hamedesmail](https://github.com/m0hamedesmail) - CEO & Founder of [MERNCore.com](https://merncore.com)**
 
-[Report Bug](https://github.com/M0hamedEsmail/next-hero-starter/issues) · [Request Feature](https://github.com/M0hamedEsmail/next-hero-starter/issues) · [Contribute](https://github.com/M0hamedEsmail/next-hero-starter/pulls)
+[Report Bug](https://github.com/M0hamedEsmail/nextjs-hero-starter/issues) · [Request Feature](https://github.com/M0hamedEsmail/nextjs-hero-starter/issues) · [Contribute](https://github.com/M0hamedEsmail/nextjs-hero-starter/pulls)

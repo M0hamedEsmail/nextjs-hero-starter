@@ -20,12 +20,12 @@
   "license": "CC-BY-NC-4.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/M0hamedEsmail/next-hero-starter"
+    "url": "https://github.com/M0hamedEsmail/nextjs-hero-starter"
   },
   "bugs": {
-    "url": "https://github.com/M0hamedEsmail/next-hero-starter/issues"
+    "url": "https://github.com/M0hamedEsmail/nextjs-hero-starter/issues"
   },
-  "homepage": "https://github.com/M0hamedEsmail/next-hero-starter#readme",
+  "homepage": "https://github.com/M0hamedEsmail/nextjs-hero-starter#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

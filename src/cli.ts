@@ -19,7 +19,7 @@ const packageJson = JSON.parse(readFileSync(join(__dirname, '../package.json'), 
 const program = new Command();
 
 program
-  .name('create-next-hero-starter')
+  .name('create-nextjs-hero-starter')
   .description('🚀 Generate a production-ready Next.js + HeroUI + Redux Toolkit frontend')
   .version(packageJson.version, '-v, --version', 'Output the current version')
   .argument('<project-name>', 'Name of your project')
@@ -32,7 +32,7 @@ program
       console.log();
       console.log(chalk.cyan.bold('╔═══════════════════════════════════════════╗'));
       console.log(chalk.cyan.bold('║                                           ║'));
-      console.log(chalk.cyan.bold('      🚀 Next Hero Starter Generator 🚀     '));
+      console.log(chalk.cyan.bold('    🚀 NextJS Hero Starter Generator 🚀     '));
       console.log(chalk.cyan.bold('║                                           ║'));
       console.log(chalk.cyan.bold('╚═══════════════════════════════════════════╝'));
       console.log();

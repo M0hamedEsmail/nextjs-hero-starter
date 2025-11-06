@@ -28,7 +28,7 @@ export default function NavbarComponent() {
     { name: "Home", href: "/" },
     { name: "GitHub", href: "https://github.com/m0hamedesmail" },
     { name: "NPM Profile", href: "https://www.npmjs.com/~m0hamedesmail" },
-    { name: "This Package", href: "https://www.npmjs.com/package/next-hero-starter" },
+    { name: "This Package", href: "https://www.npmjs.com/package/nextjs-hero-starter" },
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function NavbarComponent() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="https://www.npmjs.com/package/next-hero-starter" target="_blank">
+          <Link color="foreground" href="https://www.npmjs.com/package/nextjs-hero-starter" target="_blank">
             This Package
           </Link>
         </NavbarItem>
